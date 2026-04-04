@@ -29,13 +29,13 @@ const llm = new ResilientLLM({
   }
 });
 
-// 👇 only these two things changed
+
 const { content, metadata } = await llm.chat(
   [
     { role: "user", content: "Add 2 and 3 and respond ONLY with JSON having sum and steps" }
   ],
-  { responseFormat: { type: "json_object" } }  // 👈 tells AI to reply in JSON
+  { responseFormat: { type: "json_object" } } 
 );
 
-console.log("JSON Response:", content);        // 👈 will print clean JSON
+console.log("JSON Response:", content);        
 console.log("Provider used:", metadata.service.final);
