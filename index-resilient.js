@@ -1,4 +1,5 @@
-import "dotenv/config";
+import dotenv from "dotenv";
+dotenv.config();
 import { ResilientLLM, ProviderRegistry } from "resilient-llm";
 
 // Provider 1 - Primary

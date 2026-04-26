@@ -1,5 +1,12 @@
 {
-  "name": "resilentllm-a-best-project",
+  "name": "resilientllm-a-best-project",
   "version": "1.0.0",
-  "type": "module" 
-} 
+  "type": "module",
+  "scripts": {
+    "start": "node index-resilient.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "resilient-llm": "^1.7.4"
+  }
+}

@@ -1,60 +1,130 @@
-# 🚀 Production-Ready LLM Development
+# 🚀 Resilient LLM CLI
 
-Welcome to this project!  
-This repository is focused on building **production-ready Large Language Model (LLM) systems** with real-world reliability and scalability.
-
----
-
-## 📌 What This Project Covers
-
-- 🧠 Working with **LLMs in real-world applications**
-- 🔁 Implementing **fallback APIs** for reliability
-- 📦 Generating **structured JSON outputs**
-- ⚡ Building **resilient backend systems**
-- 🌐 Integrating multiple AI providers
+A **production-inspired resilient LLM system** built using Node.js and OpenRouter.
+This project demonstrates how to design fault-tolerant AI systems with retry logic, fallback mechanisms, and multi-provider support.
 
 ---
 
-## 💡 Key Features
+## ✨ Features
 
-- ✅ **Resilient Architecture**  
-  Handles failures using fallback mechanisms
-
-- 🔄 **Multi-API Support**  
-  Switch between different LLM providers seamlessly
-
-- 📊 **Structured Outputs**  
-  Get consistent JSON responses for easier integration
-
-- ⚙️ **Production-Oriented Design**  
-  Built with scalability and robustness in mind
+* 🔁 Automatic retry handling
+* 🔄 Fallback provider support
+* ⚡ Rate limit handling
+* 🧠 Multi-model support (OpenRouter)
+* 💬 Interactive CLI chatbot
+* 📊 Response metadata (provider, retries, tokens)
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-- JavaScript (Node.js)
-- APIs (LLM Providers)
-- Backend Development Concepts
+* Node.js
+* resilient-llm (library)
+* OpenRouter API
+* dotenv
 
 ---
 
-## 📚 Learning Source
+## 📁 Project Structure
 
-This project is inspired by and follows the open-source repository:
+```
+RESILIENT-LLM-PROJECT/
+│
+├── index-resilient.js   # Main application
+├── package.json         # Dependencies
+├── .env                 # API key (not committed)
+└── .gitignore
+```
 
-🔗 https://github.com/gitcommitshow/resilient-llm
+---
 
-## 🚀 Getting Started
+## 🔑 Setup Instructions
 
-1. Clone the repository
-```bash
-git clone https://github.com/prasad218/RESILENT-LLM-PROJECT
-cd RESILENT-LLM-PROJECT
+### 1. Clone repository
 
-Install dependencies
+```
+git clone https://github.com/YOUR_USERNAME/resilient-llm-cli.git
+cd resilient-llm-cli
+```
+
+---
+
+### 2. Install dependencies
+
+```
 npm install
+```
 
-Run the project
-npm start
+---
 
+### 3. Create `.env` file
+
+```
+OPENROUTER_API_KEY=your_api_key_here
+```
+
+👉 Get API key from: https://openrouter.ai
+
+---
+
+### 4. Run the project
+
+```
+node index-resilient.js
+```
+
+---
+
+## 💡 Usage
+
+### Single command:
+
+```
+node index-resilient.js "Explain AI"
+```
+
+### Interactive mode:
+
+```
+node index-resilient.js
+```
+
+---
+
+## 🧠 How It Works
+
+1. Sends user input to OpenRouter
+2. Uses resilient-llm to manage:
+
+   * Retry logic
+   * Rate limiting
+   * Fallback provider
+3. Returns structured AI response
+
+---
+
+## 🔒 Security
+
+* `.env` file is excluded using `.gitignore`
+* API keys are never exposed in code
+
+---
+
+## 🚀 Future Improvements
+
+* Multi-provider routing (OpenAI + OpenRouter)
+* Web UI (React / HTML frontend)
+* Logging dashboard
+* Cost optimization system
+
+---
+
+## 👨‍💻 Author
+
+Your Name
+
+---
+
+## ⭐ If you like this project
+
+Give it a star ⭐ on GitHub!
